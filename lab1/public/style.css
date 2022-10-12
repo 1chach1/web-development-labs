@@ -1,0 +1,63 @@
+body {
+	font-family: "Helvetica", "Arial", sans-serif;
+	margin: 0 auto; 
+	max-width: 900px;
+    min-width: 0; 
+    padding: 0 10px 25px; 
+	display: grid;
+	grid-template-rows: 45px auto 45px;
+	grid-template-columns: 3fr 1fr;
+	grid-template-areas:
+		"header nav"
+		"ct ct"
+		"footer footer";
+}
+header {
+	grid-area: header;
+	justify-self: left;
+	align-self: end;
+	font-size: 24px;
+	margin: 0px;
+}
+
+article {
+	grid-area: ct;
+	border-top: 2px solid gray;
+	justify-self: center;
+	align-self: end;
+	font-size: 16px; 
+	word-wrap: normal;  
+}
+nav {
+	grid-area: nav;
+	justify-self: right;
+	align-self: end;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+footer {
+	grid-area: footer;
+	border-top: 2px solid gray;
+	justify-self: center;
+	text-align: center;
+	padding: 3px;
+}
+/*
+Responsive design
+*/
+
+@media screen and (max-width: 500px) {
+  body {
+    grid-template-columns: auto;
+    grid-template-rows: minmax(40px, auto) minmax(30px, auto) auto auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "ct"
+	"footer"
+  }
+  header, nav, footer {
+    text-align: center;
+    justify-self: center;
+  }
+}
