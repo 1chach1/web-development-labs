@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="style.css" />
+{% endblock style %}
+{% block content %}
+<header>
+  Официальный сайт Александра
+</header>
+<article>
+	<p>Нажмите <a href="{{ get_url(path="@/blog/_index.md") }}">СЮДА</a> для погружения.</p>
+</article>
+{% endblock content %}
